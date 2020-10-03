@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Navbar from "../components/navbar";
-import styles from "./styles.module.css";
+import Layout from "components/layout";
 // import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -11,10 +10,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.root}>
-        <Navbar />
+      <Layout>
         <h1>Sangil Yun's website</h1>
-      </div>
+      </Layout>
     </div>
   );
 }

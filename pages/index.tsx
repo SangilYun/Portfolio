@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "components/layout";
+import Container from "components/container";
 // import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -11,7 +12,9 @@ export default function Home() {
       </Head>
 
       <Layout>
-        <h1>Sangil Yun's website</h1>
+        <Container>
+          <h1>Sangil Yun's website</h1>
+        </Container>
       </Layout>
     </div>
   );

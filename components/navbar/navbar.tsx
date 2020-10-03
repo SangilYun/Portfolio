@@ -1,12 +1,24 @@
+import Link from "next/link";
+
 const Navbar = () => {
   return (
     <nav className="d-flex justify-content-between">
-      <div>sangil yun</div>
+      <div>
+        <Link href="/">sangil yun</Link>
+      </div>
       <div className="d-flex">
-        <div>about</div>
-        <div className="ml-4">projects</div>
-        <div className="ml-4">blog</div>
-        <div className="ml-4">contact</div>
+        <div>
+          <Link href="/about">about</Link>
+        </div>
+        <div className="ml-4">
+          <Link href="/projects">projects</Link>
+        </div>
+        <div className="ml-4">
+          <Link href="/blog">blog</Link>
+        </div>
+        <div className="ml-4">
+          <Link href="/contact">contact</Link>
+        </div>
       </div>
     </nav>
   );

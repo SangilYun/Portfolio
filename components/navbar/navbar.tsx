@@ -1,8 +1,8 @@
 import Link from "next/link";
-
+import styles from "./styles.module.css";
 const Navbar = () => {
   return (
-    <nav className="d-flex justify-content-between">
+    <nav className={`${styles.root} d-flex justify-content-between`}>
       <div>
         <Link href="/">sangil yun</Link>
       </div>

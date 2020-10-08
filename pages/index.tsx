@@ -1,11 +1,14 @@
 import Head from "next/head";
 import Layout from "components/layout";
 import Container from "components/container";
+import Profile from "components/profile";
+import Project from "components/highlights/project";
+import styles from "./styles.module.css";
 // import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function App() {
   return (
-    <div>
+    <div className={styles.root}>
       <Head>
         <title> Sangil Yun</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,7 +16,8 @@ export default function Home() {
 
       <Layout>
         <Container>
-          <h1>Sangil Yun's website</h1>
+          <Profile />
+          <Project />
         </Container>
       </Layout>
     </div>

@@ -4,3 +4,14 @@
   width: 100%;
   max-width: 760px;
 }
+.logo,
+.logo:hover {
+  text-decoration: none;
+  color: #1a202c;
+}
+
+.link,
+.link:hover {
+  text-decoration: none;
+  color: #4a5568;
+}

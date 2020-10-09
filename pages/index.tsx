@@ -14,10 +14,6 @@ export default function App() {
       <Head>
         <title> Sangil Yun</title>
         <link rel="icon" href="/favicon.ico" />
-        <script
-          src="https://kit.fontawesome.com/bdeb68c9ef.js"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
 
       <Layout>

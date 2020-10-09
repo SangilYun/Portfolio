@@ -1,8 +1,17 @@
 version: 2.1
+jobs:
+  build:
+    executor:
+      name: node/default
+      tag: "12.19.0"
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          command: npm run test
 orbs:
   node: circleci/node@4.1.0
 workflows:
-  build-and-test:
+  test-and-deploy:
     jobs:
       - build
-      - test

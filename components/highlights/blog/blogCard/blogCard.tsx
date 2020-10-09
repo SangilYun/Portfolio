@@ -6,7 +6,8 @@ const BlogCard = () => {
     <div className={styles.root}>
       <div className={styles.title}> blog title</div>
       <div className={styles.description}>
-        blog description...<HighlightedText>continue reading -></HighlightedText>
+        blog description...
+        <HighlightedText>continue reading -&gt;</HighlightedText>
       </div>
     </div>
   );

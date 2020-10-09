@@ -1,8 +1,15 @@
 import HighlightTitle from "../highlighTitle";
+import HighlightedText from "components/highlightedText";
 
-const Blog = () => {
+import BlogCard from "./blogCard";
+
+const Blog = () => (
   <div>
     <HighlightTitle>Highlighted Blog Posts</HighlightTitle>
-  </div>;
-};
+    <BlogCard />
+    <BlogCard />
+    <BlogCard />
+    <HighlightedText>view all blog post</HighlightedText>
+  </div>
+);
 export default Blog;

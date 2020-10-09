@@ -1,0 +1,10 @@
+.root {
+  margin-bottom: 40px;
+}
+.title {
+  font-size: 25px;
+}
+.description {
+  display: flex;
+  font-size: 20px;
+}

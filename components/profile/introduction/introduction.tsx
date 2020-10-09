@@ -3,11 +3,11 @@ const Introduction = () => {
   return (
     <div>
       <div className={styles.greeting}>HI, I'M SANGIL</div>
-      <div>
+      <div className={styles.intro}>
         I’m a frontend developer in Seoul, Korea. I have experience in web
         developement using React, Mobx, flow and more.
       </div>
-      <div>
+      <div className={styles.intro}>
         Here you can see my selected projects I’ve done as well as my blog. You
         can also contact me or view my resume.
       </div>

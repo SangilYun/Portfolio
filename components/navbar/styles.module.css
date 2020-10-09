@@ -8,10 +8,12 @@
 .logo:hover {
   text-decoration: none;
   color: #1a202c;
+  font-size: 20px;
 }
 
 .link,
 .link:hover {
   text-decoration: none;
   color: #4a5568;
+  font-size: 20px;
 }

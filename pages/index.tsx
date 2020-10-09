@@ -24,7 +24,7 @@ export default function App() {
         <Container>
           <Profile />
           <Project />
-          <Blog />
+          <Blog aaa />
         </Container>
       </Layout>
 

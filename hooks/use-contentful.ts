@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 
 const useContentful = (query: string) => {
   let [data, setData] = useState(null);
+  let [errors, setErrors] = useState<string[] | null>(null);
   useEffect(() => {
     window
       .fetch(`https://graphql.contentful.com/content/v1/spaces/${space}`, {
@@ -16,9 +17,17 @@ const useContentful = (query: string) => {
         body: JSON.stringify({ query }),
       })
       .then((response) => response.json())
-      .then((json) => setData(json.data));
+      .then(({ data, errors }) => {
+        if (errors) {
+          setErrors(errors);
+        }
+        if (data) {
+          setData(data);
+        }
+      })
+      .catch((error) => setErrors([error]));
   }, [query]);
 
-  return { data };
+  return { data, errors };
 };
 export default useContentful;

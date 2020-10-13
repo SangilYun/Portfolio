@@ -5,9 +5,13 @@ import Container from "components/container";
 import Profile from "components/profile";
 import Project from "components/highlights/project";
 import Blog from "components/highlights/blog";
+
+import fetchContentful from "utils/fetchContentful";
 // import styles from "../styles/Home.module.css";
 
-export default function App() {
+//TODO: delete console.log
+export default function App({ data }) {
+  console.log("data", data);
   return (
     <div>
       <Head>
@@ -18,12 +22,47 @@ export default function App() {
       <Layout>
         <Container>
           <Profile />
-          <Project />
-          <Blog />
+          <Project projectPosts={data.projectPostsCollection.items} />
+          <Blog blogPosts={data.blogPostsCollection.items} />
         </Container>
       </Layout>
 
       <Footer />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const data = await fetchContentful(`query{
+  	projectPostsCollection(limit:5){
+      items{
+        sys{
+          id
+        },
+        title,
+        imagesCollection(limit:1){
+          items{
+            url
+          }
+        }
+      }
+    },
+blogPostsCollection(limit:5){
+      items{
+        sys{
+          id
+        },
+        title,
+        date,
+        description{
+          json,
+          }
+        }
+      }
+    }
+    `);
+  console.log("data", data);
+  return {
+    props: { ...data },
+  };
 }

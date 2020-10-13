@@ -1,3 +1,6 @@
+This project is still a work in progress. Until it's ready to deploy, all the work will be merged in the develop branch!
+You can check my work there for now :) 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

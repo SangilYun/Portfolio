@@ -3,9 +3,17 @@ import HighlightedText from "components/highlightedText";
 import ProjectCard from "./projectCard";
 import styles from "./styles.module.css";
 
-//TODO: add types
-const Project = ({ projectPosts }) => {
-  console.log("projectPosts", projectPosts);
+interface ProjectPost {
+  sys: {
+    id: string;
+  };
+  title: string;
+  imagesCollection: {
+    items: Array<{ url: string }>;
+  };
+}
+
+const Project = ({ projectPosts }: { projectPosts: Array<ProjectPost> }) => {
   return (
     <div className={styles.root}>
       <div className={styles.title}>
@@ -13,7 +21,7 @@ const Project = ({ projectPosts }) => {
         <HighlightedText>view all blog posts</HighlightedText>
       </div>
       <div style={{ display: "flex", width: "100%", overflow: "scroll" }}>
-        {projectPosts.map((projectPost) => {
+        {projectPosts.map((projectPost: ProjectPost) => {
           return (
             <ProjectCard
               key={projectPost.sys.id}

@@ -3,9 +3,12 @@ import styles from "./styles.module.css";
 
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-//TODO: add types
-const BlogCard = (props) => {
-  console.log("blogCard", props);
+interface BlogCardProps {
+  date: string;
+  description: any; //TODO: rich text type
+  title: string;
+}
+const BlogCard = (props: BlogCardProps) => {
   return (
     <div className={styles.root}>
       <div className={styles.title}> blog title</div>

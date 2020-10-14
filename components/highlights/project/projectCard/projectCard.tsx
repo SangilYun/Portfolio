@@ -1,8 +1,11 @@
 import styles from "./styles.module.css";
 
-//TODO: add types
-const ProjectCard = ({ id, image, alt }) => {
-  console.log("project card", image);
+interface ProjectCardProps {
+  id: string;
+  image: { url: string };
+  alt: string;
+}
+const ProjectCard = ({ id, image, alt }: ProjectCardProps) => {
   const onClick = () => {
     console.log("id", id);
   };
@@ -14,6 +17,7 @@ const ProjectCard = ({ id, image, alt }) => {
         backgroundSize: "cover",
       }}
       onClick={onClick}
+      title={alt}
     />
   );
 };

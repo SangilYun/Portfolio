@@ -3,9 +3,20 @@ import HighlightedText from "components/highlightedText";
 
 import BlogCard from "./blogCard";
 
-//TODO: add types
-const Blog = ({ blogPosts }) => {
-  console.log("blogPosts", blogPosts);
+export interface blogItem {
+  sys: {
+    id: string;
+  };
+  title: string;
+  date: string;
+  description: any; //TODO: rich text type
+}
+
+export interface BlogProps {
+  blogPosts: Array<blogItem>;
+}
+
+const Blog = ({ blogPosts }: BlogProps) => {
   return (
     <div>
       <HighlightTitle>Highlighted Blog Posts</HighlightTitle>

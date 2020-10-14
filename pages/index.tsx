@@ -7,10 +7,19 @@ import Project from "components/highlights/project";
 import Blog from "components/highlights/blog";
 
 import fetchContentful from "utils/fetchContentful";
-// import styles from "../styles/Home.module.css";
 
+import type { blogItem } from "components/highlights/blog/blog";
 //TODO: delete console.log
-export default function App({ data }) {
+
+export default function App({
+  data,
+}: {
+  //TODO: type 정리하기
+  data: {
+    projectPostsCollection: { items: any };
+    blogPostsCollection: { items: Array<blogItem> };
+  };
+}) {
   console.log("data", data);
   return (
     <div>

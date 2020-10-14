@@ -8,19 +8,17 @@ import Blog from "components/highlights/blog";
 
 import fetchContentful from "utils/fetchContentful";
 
-import type { blogItem } from "components/highlights/blog/blog";
-//TODO: delete console.log
+import type { BlogItem } from "components/highlights/blog/blog";
+import type { ProjectPost } from "components/highlights/project/project";
 
 export default function App({
   data,
 }: {
-  //TODO: type 정리하기
   data: {
-    projectPostsCollection: { items: any };
-    blogPostsCollection: { items: Array<blogItem> };
+    projectPostsCollection: { items: Array<ProjectPost> };
+    blogPostsCollection: { items: Array<BlogItem> };
   };
 }) {
-  console.log("data", data);
   return (
     <div>
       <Head>

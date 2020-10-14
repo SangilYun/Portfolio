@@ -3,7 +3,7 @@ import HighlightedText from "components/highlightedText";
 
 import BlogCard from "./blogCard";
 
-export interface blogItem {
+export interface BlogItem {
   sys: {
     id: string;
   };
@@ -13,7 +13,7 @@ export interface blogItem {
 }
 
 export interface BlogProps {
-  blogPosts: Array<blogItem>;
+  blogPosts: Array<BlogItem>;
 }
 
 const Blog = ({ blogPosts }: BlogProps) => {

@@ -3,7 +3,7 @@ import HighlightedText from "components/highlightedText";
 import ProjectCard from "./projectCard";
 import styles from "./styles.module.css";
 
-interface ProjectPost {
+export interface ProjectPost {
   sys: {
     id: string;
   };

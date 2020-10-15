@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import styles from "./styles.module.css";
 
 interface ProjectCardProps {
@@ -6,8 +7,10 @@ interface ProjectCardProps {
   alt: string;
 }
 const ProjectCard = ({ id, image, alt }: ProjectCardProps) => {
-  const onClick = () => {
-    console.log("id", id);
+  const router = useRouter();
+  const onClick = (event: React.MouseEvent) => {
+    event.preventDefault();
+    router.push(`/projects/${id}`);
   };
   return (
     <div

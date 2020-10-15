@@ -16,3 +16,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* https://stackoverflow.com/questions/35820429/main-element-not-working-in-internet-explorer-11 */
+main {
+  display: block; /* new */
+  width: 100%;
+}

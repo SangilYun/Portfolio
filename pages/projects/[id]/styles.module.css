@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.buttons {
+  display: flex;
+}
+.github_btn {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.description {
+  margin-bottom: 50px;
+}

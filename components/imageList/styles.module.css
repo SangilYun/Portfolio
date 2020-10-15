@@ -1,0 +1,25 @@
+.images {
+  display: flex;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+.image {
+  min-width: 200px;
+  height: 150px;
+  border-radius: 8px;
+}
+.image:not(:first-child) {
+  margin-left: 5px;
+}
+.imageContainer {
+  background-color: black;
+  border-radius: 10px;
+}
+.image_lg {
+  max-width: 680px;
+  height: 500px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

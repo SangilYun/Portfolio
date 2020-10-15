@@ -1,3 +1,10 @@
+
+stack: Nextjs(typescript), GraphQL, contentful
+
+rough proto type: https://www.figma.com/proto/EvUA2YkjCGx4Djre4shDth/portfolio?node-id=35%3A7&scaling=contain
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

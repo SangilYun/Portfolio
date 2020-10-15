@@ -85,7 +85,7 @@ export const getStaticProps = async ({
   }
 }`);
   return {
-    props: { post: data.data.projectPostsCollection.items },
+    props: { post: data?.data.projectPostsCollection.items },
     revalidate: 1,
   };
 };

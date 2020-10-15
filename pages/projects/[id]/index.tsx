@@ -17,6 +17,9 @@ interface ProjectProps {
   title: string;
 }
 const Project = ({ post }: { post: Array<ProjectProps> }) => {
+  if (!post) {
+    return null;
+  }
   console.log("project props", post);
   const {
     title,
@@ -87,11 +90,12 @@ export const getStaticProps = async ({
 }`);
   return {
     props: { post: items },
+    revalidate: 1,
   };
 };
 
 export const getStaticPaths = async () => {
-  const { data } = await fetchContentful(`query{
+  const data = await fetchContentful(`query{
   	projectPostsCollection(limit:5){
       items{
         sys{
@@ -101,13 +105,14 @@ export const getStaticPaths = async () => {
     }
   }
     `);
-  const paths = data.projectPostsCollection.items.map(
+  const paths = data.data.projectPostsCollection.items.map(
     (item: { sys: { id: string } }) => ({
       params: { id: item.sys.id },
     })
   );
   return {
     paths,
-    fallback: true,
+    fallback: false,
+    // fallback: true is not supported when using next export.
   };
 };

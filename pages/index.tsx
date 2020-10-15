@@ -65,8 +65,8 @@ blogPostsCollection(limit:5){
       }
     }
     `);
-  console.log("data", data);
   return {
     props: { ...data },
+    revalidate: 1,
   };
 }

@@ -105,7 +105,7 @@ export const getStaticPaths = async () => {
     (item: { sys: { id: string } }) => ({
       params: { id: item.sys.id },
     })
-  ) || { params: { id: "" } };
+  ) || [{ params: { id: "" } }];
   console.log("paths", paths);
   return {
     paths,

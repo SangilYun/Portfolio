@@ -105,7 +105,7 @@ export const getStaticPaths = async () => {
     }
   }
     `);
-  const paths = data.data.projectPostsCollection.items.map(
+  const paths = data?.data.projectPostsCollection.items.map(
     (item: { sys: { id: string } }) => ({
       params: { id: item.sys.id },
     })

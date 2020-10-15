@@ -91,11 +91,7 @@ export const getStaticProps = async ({
 };
 
 export const getStaticPaths = async () => {
-  const {
-    data: {
-      projectPostsCollection: { items },
-    },
-  } = await fetchContentful(`query{
+  const { data } = await fetchContentful(`query{
   	projectPostsCollection(limit:5){
       items{
         sys{
@@ -105,9 +101,11 @@ export const getStaticPaths = async () => {
     }
   }
     `);
-  const paths = items.map((item: { sys: { id: string } }) => ({
-    params: { id: item.sys.id },
-  }));
+  const paths = data.projectPostsCollection.items.map(
+    (item: { sys: { id: string } }) => ({
+      params: { id: item.sys.id },
+    })
+  );
   return {
     paths,
     fallback: true,

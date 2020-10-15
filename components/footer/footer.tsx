@@ -12,15 +12,15 @@ const Footer = () => {
         <div>Sangil Yun © 2020</div>
         <div className={styles.icons}>
           <FontAwesomeIcon
-            className={cn(styles.icon, "fab fa-linkedin fa-2x")}
+            className={cn(styles.icon, "fab fa-linkedin fa-lg")}
             icon={["fab", "github"]}
           />
           <FontAwesomeIcon
-            className={cn(styles.icon, "fab fa-linkedin fa-2x")}
+            className={cn(styles.icon, "fab fa-linkedin fa-lg")}
             icon={["fab", "linkedin"]}
           />
           <FontAwesomeIcon
-            className={cn(styles.icon, "fab fa-linkedin fa-2x")}
+            className={cn(styles.icon, "fab fa-linkedin fa-lg")}
             icon={["fab", "medium"]}
           />
         </div>

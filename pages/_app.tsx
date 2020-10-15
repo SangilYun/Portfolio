@@ -8,9 +8,10 @@ import {
   faMedium,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { faDesktop } from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
-library.add(faLinkedin, faMedium, faGithub);
+library.add(faLinkedin, faMedium, faGithub, faDesktop);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;

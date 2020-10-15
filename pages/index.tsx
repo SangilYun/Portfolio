@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Footer from "components/footer";
 import Layout from "components/layout";
 import Container from "components/container";
 import Profile from "components/profile";
@@ -33,8 +32,6 @@ export default function App({
           <Blog blogPosts={data.blogPostsCollection.items} />
         </Container>
       </Layout>
-
-      <Footer />
     </div>
   );
 }

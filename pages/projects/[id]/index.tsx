@@ -64,11 +64,7 @@ export const getStaticProps = async ({
   params: { id: string };
 }) => {
   console.log("getStaticProps, params", params);
-  const {
-    data: {
-      projectPostsCollection: { items },
-    },
-  } = await fetchContentful(`query{
+  const data = await fetchContentful(`query{
   	projectPostsCollection(where:{sys:{id:"${params.id}"}}){
       items{
         sys{
@@ -89,7 +85,7 @@ export const getStaticProps = async ({
   }
 }`);
   return {
-    props: { post: items },
+    props: { post: data.data.projectPostsCollection.items },
     revalidate: 1,
   };
 };

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Layout from "components/layout";
 import Container from "components/container";
-import Tags from "./tags";
-import ProjectPreviewCards from "./projectPreviewCards";
+import Tags from "components/tags";
+import ProjectPreviewCards from "components/projectPreviewCards";
 
 import fetchContentful from "utils/fetchContentful";
 import { useRouter } from "next/router";

@@ -14,7 +14,7 @@ const Tags = ({
   };
   return (
     <div className={styles.root}>
-      {tags.map((tag) => (
+      {tags?.map((tag) => (
         <span
           key={tag}
           className={cn(styles.tag, { [styles.selectedTag]: selectedTags })}

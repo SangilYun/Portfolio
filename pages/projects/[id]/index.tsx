@@ -20,7 +20,6 @@ const Project = ({ post }: { post: Array<ProjectProps> }) => {
   if (!post) {
     return null;
   }
-  console.log("project props", post);
   const {
     title,
     description,

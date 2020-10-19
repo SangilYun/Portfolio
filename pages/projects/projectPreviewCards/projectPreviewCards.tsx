@@ -18,7 +18,7 @@ interface ProjectCardsProps {
 const ProjectPreviewCards = ({ projects, onClick }: ProjectCardsProps) => {
   return (
     <div className={styles.root}>
-      {projects.map((project, key) => {
+      {projects?.map((project, key) => {
         const { url } = project.imagesCollection.items[0];
         return (
           <div

@@ -1,6 +1,7 @@
 import HighlightTitle from "../highlighTitle";
 import HighlightedText from "components/highlightedText";
 import ProjectCard from "./projectCard";
+
 import styles from "./styles.module.css";
 
 export interface ProjectPost {
@@ -18,7 +19,7 @@ const Project = ({ projectPosts }: { projectPosts: Array<ProjectPost> }) => {
     <div className={styles.root}>
       <div className={styles.title}>
         <HighlightTitle>Highlighted Projects</HighlightTitle>
-        <HighlightedText>view all blog posts</HighlightedText>
+        <HighlightedText href={"/projects"}>view all projects</HighlightedText>
       </div>
       <div style={{ display: "flex", width: "100%", overflow: "scroll" }}>
         {projectPosts.map((projectPost: ProjectPost) => {

@@ -1,17 +1,12 @@
-.title {
+.root {
+  display: flex;
+  flex-direction: column;
+}
+.pageTitle {
   font-size: 30px;
   font-weight: bold;
+  margin: 40px 0;
 }
-.images {
-}
-.image {
-  max-width: 220px;
-  height: 350px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.image:hover {
-  border: 5px solid black;
+.pageDescription {
+  margin: 40px 0;
 }

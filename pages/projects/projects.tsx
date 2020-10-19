@@ -1,41 +1,68 @@
+import { useState } from "react";
 import Layout from "components/layout";
 import Container from "components/container";
+import Tags from "./tags";
+import ProjectPreviewCards from "./projectPreviewCards";
 
 import fetchContentful from "utils/fetchContentful";
+import { useRouter } from "next/router";
+
 import styles from "./styles.module.css";
-import cn from "classnames";
 
 interface ProjectsProps {
   projects: Array<{
-    date: string;
+    sys: {
+      id: string;
+    };
+    title: string;
+    intro: string;
+    tags: string[];
+    description: {
+      json: any; //TODO: add description type
+    };
     imagesCollection: { items: Array<{ url: string; title: string }> };
   }>;
+  tags: Array<string>;
 }
 
 //TODO: consider reusing project component
-const Projects = ({ projects }: ProjectsProps) => {
+const Projects = ({ projects, tags }: ProjectsProps) => {
+  const [selectedTags, setSelectedTags] = useState(new Set<string>());
+  const router = useRouter();
+
+  const projectToDisplay = selectedTags.size
+    ? projects.filter(
+        (project) =>
+          project.tags?.filter((tag) => selectedTags.has(tag)).length > 0
+      )
+    : projects;
+
+  const onClickTags = (tag: string) =>
+    setSelectedTags(
+      new Set([...selectedTags].filter((selectedTag) => selectedTag !== tag))
+    );
+
+  const onClickProjectPreview = (projectId: string) => {
+    router.push(`projects/${projectId}`);
+  };
+
   return (
     <Layout>
       <Container>
-        <div>
-          <header className={styles.title}>Projects</header>
-          <div>Here are some of selected projects I've done</div>
-          <div className={"container"}>
-            <div className={"row"}>
-              {projects.map((project, key) => {
-                const { url } = project.imagesCollection.items[0];
-                return (
-                  <div
-                    key={key}
-                    className={cn(styles.image, "col-4", {
-                      "ml-2": key % 3 !== 0,
-                    })}
-                    style={{ backgroundImage: `url(${url})` }}
-                  />
-                );
-              })}
-            </div>
+        <div className={styles.root}>
+          <header className={styles.pageTitle}>Projects</header>
+          <div className={styles.pageDescription}>
+            Here are some of selected projects I've done
           </div>
+          <Tags selectedTags tags={[...selectedTags]} onClick={onClickTags} />
+          <Tags
+            tags={tags.filter((tag) => !selectedTags.has(tag))}
+            onClick={(tag) => setSelectedTags(new Set(selectedTags.add(tag)))}
+          />
+          <ProjectPreviewCards
+            projects={projectToDisplay}
+            onClick={onClickProjectPreview}
+          />
         </div>
       </Container>
     </Layout>
@@ -46,13 +73,21 @@ export default Projects;
 export const getStaticProps = async () => {
   const {
     data: {
-      projectPostsCollection: { items },
+      projectPostsCollection: { items: projects },
+      tagsCollection: { items: tags },
     },
   } = await fetchContentful(`query{
     projectPostsCollection{
       items {
+        sys{
+          id
+        },
         title,
-        date,
+        intro,
+        description{
+          json
+        },
+        tags,
         imagesCollection(limit:1){
           items{
             url
@@ -60,8 +95,13 @@ export const getStaticProps = async () => {
         }
       }
     }
+    tagsCollection{
+      items{
+        tag
+      }
+    }
   }`);
   return {
-    props: { projects: items },
+    props: { projects, tags: tags[0].tag },
   };
 };

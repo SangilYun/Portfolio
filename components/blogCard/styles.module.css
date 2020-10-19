@@ -1,0 +1,10 @@
+.root {
+  cursor: pointer;
+}
+.title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.article {
+  margin: 20px 0;
+}

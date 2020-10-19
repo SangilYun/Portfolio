@@ -1,0 +1,33 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.projectPreviewCard {
+  display: flex;
+  margin: 40px 0;
+  cursor: pointer;
+}
+.image {
+  min-width: 200px;
+  height: 250px;
+  margin-right: 20px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.caption {
+  display: flex;
+  flex-direction: column;
+}
+.projectTitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+.projectIntro {
+  margin: 20px 0;
+}
+.tags {
+  margin: 20px 0;
+  color: #4299e1;
+}

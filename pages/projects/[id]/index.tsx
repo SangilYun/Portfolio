@@ -49,7 +49,7 @@ const Project = ({ post }: { post: Array<ProjectProps> }) => {
           </aside>
         </header>
         <main className={styles.description}>
-          {documentToReactComponents(description.json)}
+          {documentToReactComponents(description?.json)}
         </main>
         <ImageList images={images} />
       </Container>

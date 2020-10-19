@@ -1,1 +1,1 @@
-export { default } from "./blog";
+export { default, getStaticProps } from "./blog";

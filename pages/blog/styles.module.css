@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+.pageTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0;
+}
+.pageDescription {
+  margin: 40px 0;
+}

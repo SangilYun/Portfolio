@@ -1,10 +1,10 @@
 .root {
   margin-bottom: 40px;
+  cursor: pointer;
 }
 .title {
   font-size: 25px;
 }
 .description {
-  display: flex;
   font-size: 20px;
 }

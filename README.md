@@ -1,7 +1,7 @@
 
 stack: Nextjs(typescript), GraphQL, contentful
 
-rough proto type: https://www.figma.com/proto/EvUA2YkjCGx4Djre4shDth/portfolio?node-id=35%3A7&scaling=contain
+rough prototype: https://www.figma.com/proto/EvUA2YkjCGx4Djre4shDth/portfolio?node-id=35%3A7&scaling=contain
 
 
 

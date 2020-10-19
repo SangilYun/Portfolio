@@ -7,8 +7,6 @@ interface image {
 const ImageList = ({ images }: { images: Array<image> }) => {
   const [currentImageUrl, setCurrentImageUrl] = useState(images[0].url);
 
-  console.log("currentImageUrl", currentImageUrl);
-
   return (
     <div>
       <div className={styles.images}>

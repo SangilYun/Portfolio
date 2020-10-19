@@ -27,10 +27,11 @@ const Blog = ({ blogPosts }: BlogProps) => {
             title={blogPost.title}
             date={blogPost.date}
             description={blogPost.description.json}
-          ></BlogCard>
+            id={blogPost.sys.id}
+          />
         );
       })}
-      <HighlightedText>view all blog post</HighlightedText>
+      <HighlightedText href={"/blog"}>view all blog post</HighlightedText>
     </div>
   );
 };

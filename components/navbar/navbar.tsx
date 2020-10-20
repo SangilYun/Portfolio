@@ -9,11 +9,6 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="d-flex">
-        <div>
-          <Link href="/about">
-            <a className={styles.link}>about</a>
-          </Link>
-        </div>
         <div className="ml-4">
           <Link href="/projects">
             <a className={styles.link}>projects</a>

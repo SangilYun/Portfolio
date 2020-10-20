@@ -17,7 +17,9 @@ const BlogCard = (props: BlogCardProps) => {
   return (
     <div
       className={styles.root}
-      onClick={() => router.push(`/blog/${props.id}`)}
+      onClick={() =>
+        router.push(`/blog/${props.id}`).then(() => window.scrollTo(0, 0))
+      }
     >
       <div className={styles.title}> blog title</div>
       <div className={styles.description}>

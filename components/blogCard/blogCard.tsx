@@ -12,7 +12,12 @@ interface BlogCardProps {
 const BlogCard = ({ id, title, description }: BlogCardProps) => {
   const router = useRouter();
   return (
-    <div className={styles.root} onClick={() => router.push(`/blog/${id}`)}>
+    <div
+      className={styles.root}
+      onClick={() =>
+        router.push(`/blog/${id}`).then(() => window.scrollTo(0, 0))
+      }
+    >
       <div className={styles.title}>{title}</div>
       <div className={styles.article}>
         <Truncate lines={3}>{documentToPlainTextString(description)}</Truncate>

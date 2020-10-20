@@ -7,7 +7,10 @@ const HighlightedText = (props: {
 }) => {
   const router = useRouter();
   return (
-    <div className={styles.root} onClick={() => router.push(props.href)}>
+    <div
+      className={styles.root}
+      onClick={() => router.push(props.href).then(() => window.scrollTo(0, 0))}
+    >
       {props.children}
     </div>
   );

@@ -10,7 +10,7 @@ const ProjectCard = ({ id, image, alt }: ProjectCardProps) => {
   const router = useRouter();
   const onClick = (event: React.MouseEvent) => {
     event.preventDefault();
-    router.push(`/projects/${id}`);
+    router.push(`/projects/${id}`).then(() => window.scrollTo(0, 0));
   };
   return (
     <div

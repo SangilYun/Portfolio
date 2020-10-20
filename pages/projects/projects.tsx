@@ -43,7 +43,7 @@ const Projects = ({ projects, tags }: ProjectsProps) => {
     );
 
   const onClickProjectPreview = (projectId: string) => {
-    router.push(`projects/${projectId}`);
+    router.push(`projects/${projectId}`).then(() => window.scrollTo(0, 0));
   };
 
   return (

@@ -28,10 +28,24 @@
   flex-direction: column;
 }
 .submitBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0;
   border-radius: 8px;
   background-color: #4299e1;
   color: white;
   width: 85px;
   height: 45px;
+}
+
+@media screen and (max-width: 760px) {
+  .pageTitle {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  .submitBtn {
+    width: 70px;
+    height: 35px;
+  }
 }

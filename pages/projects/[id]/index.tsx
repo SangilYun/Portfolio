@@ -31,7 +31,7 @@ const Project = ({ post }: { post: Array<ProjectProps> }) => {
         <header className={styles.header}>
           <h1>{title}</h1>
           <aside className={styles.buttons}>
-            <span>
+            <span className={styles.demo_btn}>
               <FontAwesomeIcon
                 className={" m-0 mr-2 fas-2x"}
                 icon={["fas", "desktop"]}

@@ -10,3 +10,10 @@
 .pageDescription {
   margin: 40px 0;
 }
+
+@media screen and (max-width: 760px) {
+  .pageDescription,
+  .pageTitle {
+    margin: 10px 0;
+  }
+}

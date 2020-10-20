@@ -3,7 +3,9 @@
   padding: 40px;
   width: 100%;
   max-width: 760px;
+  white-space: nowrap;
 }
+
 .logo,
 .logo:hover {
   text-decoration: none;
@@ -16,4 +18,20 @@
   text-decoration: none;
   color: #4a5568;
   font-size: 20px;
+}
+
+@media screen and (max-width: 760px) {
+  .root {
+    padding: 20px;
+  }
+  .logo,
+  .logo:hover {
+    text-decoration: none;
+    color: #1a202c;
+    font-size: 15px;
+  }
+  .link,
+  .link:hover {
+    font-size: 15px;
+  }
 }

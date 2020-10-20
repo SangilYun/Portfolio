@@ -9,3 +9,9 @@
 .selectedTag {
   color: #4299e1;
 }
+
+@media screen and (max-width: 760px) {
+  .root {
+    margin: 5px 0;
+  }
+}

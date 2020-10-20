@@ -7,6 +7,9 @@
 .buttons {
   display: flex;
 }
+.demo_btn {
+  white-space: nowrap;
+}
 .github_btn {
   display: flex;
   align-items: center;
@@ -14,4 +17,13 @@
 }
 .description {
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    display: block;
+  }
+  .buttons {
+    margin: 20px 0;
+  }
 }

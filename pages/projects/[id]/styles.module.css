@@ -9,11 +9,13 @@
 }
 .demo_btn {
   white-space: nowrap;
+  cursor: pointer;
 }
 .github_btn {
   display: flex;
   align-items: center;
   margin-left: 50px;
+  cursor: pointer;
 }
 .description {
   margin-bottom: 50px;

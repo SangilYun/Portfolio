@@ -21,9 +21,9 @@ const BlogCard = (props: BlogCardProps) => {
         router.push(`/blog/${props.id}`).then(() => window.scrollTo(0, 0))
       }
     >
-      <div className={styles.title}> blog title</div>
+      <div className={styles.title}> {props.title}</div>
       <div className={styles.description}>
-        <Truncate lines={2}>
+        <Truncate lines={3}>
           {documentToPlainTextString(props.description)}
         </Truncate>
         <HighlightedText href={`/blog/${props.id}`}>

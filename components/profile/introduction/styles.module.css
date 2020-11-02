@@ -4,7 +4,10 @@
 .intro {
   font-size: 20px;
 }
-
+.text {
+  color: #4299e1;
+  cursor: pointer;
+}
 @media screen and (max-width: 760px) {
   .greeting {
     font-size: 50px;

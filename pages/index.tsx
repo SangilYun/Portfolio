@@ -38,7 +38,7 @@ export default function App({
 
 export async function getStaticProps() {
   const data = await fetchContentful(`query{
-  	projectPostsCollection(limit:5){
+  	projectPostsCollection(limit:5, order:sys_firstPublishedAt_DESC){
       items{
         sys{
           id
@@ -51,7 +51,7 @@ export async function getStaticProps() {
         }
       }
     },
-blogPostsCollection(limit:5){
+blogPostsCollection(limit:5, order:sys_firstPublishedAt_DESC){
       items{
         sys{
           id

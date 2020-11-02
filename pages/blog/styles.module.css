@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+.pageTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0;
+}
+
+@media screen and (max-width: 760px) {
+  .pageTitle {
+    margin: 20px 0;
+  }
+}

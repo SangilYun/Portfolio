@@ -1,0 +1,54 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+}
+.projectPreviewCard {
+  display: flex;
+  margin: 40px 0;
+  cursor: pointer;
+}
+.image {
+  min-width: 200px;
+  height: 250px;
+  margin-right: 20px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: black;
+}
+.caption {
+  display: flex;
+  flex-direction: column;
+}
+.projectTitle {
+  font-size: 25px;
+  font-weight: bold;
+}
+.projectIntro {
+  margin: 20px 0;
+}
+.tags {
+  margin: 20px 0;
+  color: #4299e1;
+}
+
+@media screen and (max-width: 760px) {
+  .root {
+    margin: 20px 0;
+  }
+  .projectPreviewCard {
+    margin: 20px 0;
+  }
+  .projectTitle,
+  .projectIntro,
+  .tags {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+  .image {
+    min-width: 120px;
+    height: 180px;
+  }
+}

@@ -1,0 +1,51 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+.pageTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px 0;
+}
+.inputLabel {
+  font-weight: bold;
+}
+.textField,
+.textarea,
+.textField:focus,
+.textarea:focus {
+  border: 0;
+  outline: none;
+}
+.textField {
+  height: 50px;
+}
+.textarea {
+  min-height: 250px;
+}
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+.submitBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  background-color: #4299e1;
+  color: white;
+  width: 85px;
+  height: 45px;
+}
+
+@media screen and (max-width: 760px) {
+  .pageTitle {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  .submitBtn {
+    width: 70px;
+    height: 35px;
+  }
+}

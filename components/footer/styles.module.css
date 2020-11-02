@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons {
+  width: 190px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+  .icons {
+    font-size: 1rem;
+    width: 140px;
+  }
+}

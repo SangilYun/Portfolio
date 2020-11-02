@@ -1,0 +1,10 @@
+.root {
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.title {
+  font-size: 25px;
+}
+.description {
+  font-size: 20px;
+}

@@ -1,0 +1,17 @@
+.root {
+  margin: 20px 0;
+}
+.tag {
+  color: #4a5568;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.selectedTag {
+  color: #4299e1;
+}
+
+@media screen and (max-width: 760px) {
+  .root {
+    margin: 5px 0;
+  }
+}

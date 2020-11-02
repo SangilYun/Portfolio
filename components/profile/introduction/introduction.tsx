@@ -8,7 +8,7 @@ const Introduction = () => {
       <div className={styles.greeting}>HI, I'M SANGIL</div>
       <div className={styles.intro}>
         I’m a frontend developer in Seoul, Korea. I have experience in web
-        developement using React, Mobx, flow and more.
+        development using React, Mobx, flow and more.
       </div>
       <div className={styles.intro}>
         Here you can see my

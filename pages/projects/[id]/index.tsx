@@ -46,7 +46,6 @@ const Project = ({ post }: { post: Array<ProjectProps> }) => {
     tags,
     imagesCollection: { items: images },
   } = post[0];
-  console.log(post[0]);
   return (
     <Layout>
       <Container>

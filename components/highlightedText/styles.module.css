@@ -1,0 +1,12 @@
+.root {
+  color: #4299e1;
+  font-size: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 760px) {
+  .root {
+    font-size: 15px;
+  }
+}

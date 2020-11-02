@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.buttons {
+  display: flex;
+}
+.demo_btn {
+  white-space: nowrap;
+  cursor: pointer;
+}
+.github_btn {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.description {
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    display: block;
+  }
+  .buttons {
+    margin: 20px 0;
+  }
+}

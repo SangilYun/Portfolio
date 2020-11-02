@@ -51,9 +51,6 @@ const Projects = ({ projects, tags }: ProjectsProps) => {
       <Container>
         <div className={styles.root}>
           <header className={styles.pageTitle}>Projects</header>
-          <div className={styles.pageDescription}>
-            Here are some of selected projects I've done
-          </div>
           <Tags selectedTags tags={[...selectedTags]} onClick={onClickTags} />
           <Tags
             tags={tags.filter((tag) => !selectedTags.has(tag))}
@@ -77,7 +74,7 @@ export const getStaticProps = async () => {
       tagsCollection: { items: tags },
     },
   } = await fetchContentful(`query{
-    projectPostsCollection{
+    projectPostsCollection(order:sys_firstPublishedAt_DESC){
       items {
         sys{
           id

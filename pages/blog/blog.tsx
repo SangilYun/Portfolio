@@ -17,9 +17,6 @@ const Blog = ({ blogPosts }: BlogProps) => {
       <Container>
         <div className={styles.root}>
           <header className={styles.pageTitle}>Blog</header>
-          <div className={styles.pageDescription}>
-            Here are some blog posts I've written
-          </div>
           <div>
             {blogPosts.map((post, index) => (
               <BlogCard

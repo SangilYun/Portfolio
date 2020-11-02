@@ -7,13 +7,9 @@
   font-weight: bold;
   margin: 40px 0;
 }
-.pageDescription {
-  margin: 40px 0;
-}
 
 @media screen and (max-width: 760px) {
-  .pageTitle,
-  .pageDescription {
+  .pageTitle {
     margin: 20px 0;
   }
 }

@@ -7,8 +7,8 @@ const Introduction = () => {
     <div>
       <div className={styles.greeting}>HI, I'M SANGIL</div>
       <div className={styles.intro}>
-        I’m a frontend developer in Seoul, Korea. I have experience in web
-        development using React, Mobx, flow and more.
+        I’m a web developer in Seoul, South Korea. I have experience in web
+        development using React, Nodejs and more.
       </div>
       <div className={styles.intro}>
         Here you can see my
@@ -16,7 +16,7 @@ const Introduction = () => {
           {` selected projects `}
         </span>
         I’ve done as well as my
-        <span className={styles.text} onClick={() => router.push("/projects")}>
+        <span className={styles.text} onClick={() => router.push("/blog")}>
           {` blog`}
         </span>
         . You can also
